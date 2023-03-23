@@ -6,14 +6,16 @@
 <h1>Gallery</h1>
 <div class="gallery">
     {#each art as work}
-        <figure>
-            <img src="{`https://www.artic.edu/iiif/2/${work.image_id}/full/843,/0/default.jpg`}">
-            <figcaption>
-                {work.artist_title}<br />
-                <span class="title">{work.title}</span> {work.date_display}<br />
-                {work.medium_display}
-            </figcaption>
-        </figure>
+        <a href="/Gallery/{work.id}">
+            <figure>
+                <img src="{`https://www.artic.edu/iiif/2/${work.image_id}/full/843,/0/default.jpg`}">
+                <figcaption>
+                    {work.artist_title}<br />
+                    <span class="title">{work.title}</span> {work.date_display}<br />
+                    {work.medium_display}
+                </figcaption>
+            </figure>
+        </a>
     {/each}
 </div>
 
